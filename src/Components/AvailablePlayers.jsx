@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { use } from 'react';
 
-const AvailablePlayers = () => {
+const AvailablePlayers = ({availablePlayers}) => {
+    const players=use(availablePlayers);
+    console.log(players);
     return (
         <div>
             
