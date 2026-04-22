@@ -78,7 +78,7 @@
   },
   {
     "id": 8,
-    "playerImage": "https://example.com/images/trent_boult.jpg",
+    "playerImage": "https://i.ibb.co.com/S74hk6kB/Trent-Boult.avif",
     "playerName": "Trent Boult",
     "playerCountry": "New Zealand",
     "playingRole": "Bowler",
@@ -89,7 +89,7 @@
   },
   {
     "id": 9,
-    "playerImage": "https://example.com/images/joe_root.jpg",
+    "playerImage": "https://i.ibb.co.com/pBdMKsMj/joe-root.jpg",
     "playerName": "Joe Root",
     "playerCountry": "England",
     "playingRole": "Batsman",
@@ -100,7 +100,7 @@
   },
   {
     "id": 10,
-    "playerImage": "https://example.com/images/steve_smith.jpg",
+    "playerImage": "https://i.ibb.co.com/Jww20tSG/Steve-Smith.webp",
     "playerName": "Steve Smith",
     "playerCountry": "Australia",
     "playingRole": "Batsman",
@@ -111,7 +111,7 @@
   },
   {
     "id": 11,
-    "playerImage": "https://example.com/images/rashid_khan.jpg",
+    "playerImage": "https://i.ibb.co.com/YT76mkpc/Rashid-Khan.jpg",
     "playerName": "Rashid Khan",
     "playerCountry": "Afghanistan",
     "playingRole": "Bowler",
@@ -122,7 +122,7 @@
   },
   {
     "id": 12,
-    "playerImage": "https://example.com/images/quinton_de_kock.jpg",
+    "playerImage": "https://i.ibb.co.com/2708zqxd/Quintonde-Kock.jpg",
     "playerName": "Quinton de Kock",
     "playerCountry": "South Africa",
     "playingRole": "Wicketkeeper-Batsman",
