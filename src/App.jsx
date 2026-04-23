@@ -10,11 +10,12 @@ import { Suspense, useState } from 'react'
 
 function App() {
   const [toggle,setToggle]=useState(true)
+  const [availableBalance,setAvailableBalance]=useState(6000000)
  
 
   return (
     <>
-    <Navbar></Navbar>
+    <Navbar availableBalance={availableBalance} ></Navbar>
 
     <div className=' max-w-5xl mx-auto flex justify-between items-center font-bold'>
       <h1>Available Players</h1>
@@ -26,7 +27,8 @@ function App() {
 
     {
       toggle===true?<Suspense fallback='Loading...'>
-      <AvailablePlayers availablePlayers={availablePlayers} ></AvailablePlayers>
+      <AvailablePlayers availablePlayers={availablePlayers}
+      setAvailableBalance={setAvailableBalance} availableBalance={availableBalance} ></AvailablePlayers>
     </Suspense>:<SelectedPlayers></SelectedPlayers>
     }
 
