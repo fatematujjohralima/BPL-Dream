@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { use } from 'react';
+import SelectedCard from '../SelectedCard/SelectedCard';
 
-const SelectedPlayers = () => {
+
+const SelectedPlayers = ({ selectedPlayerData }) => {
+    
+    console.log(selectedPlayerData)
     return (
-        <div>
+        <div className='max-w-5xl mx-auto'>
+            {
+                selectedPlayerData.map(player => <SelectedCard player={player}></SelectedCard>)
+                
+            } 
             
         </div>
     );

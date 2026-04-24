@@ -11,6 +11,8 @@ import { Suspense, useState } from 'react'
 function App() {
   const [toggle,setToggle]=useState(true)
   const [availableBalance,setAvailableBalance]=useState(6000000)
+  const [selectedPlayerData,setSelectedPlayerData]=useState([])
+  // console.log(selectedPlayerData);
  
 
   return (
@@ -28,8 +30,8 @@ function App() {
     {
       toggle===true?<Suspense fallback='Loading...'>
       <AvailablePlayers availablePlayers={availablePlayers}
-      setAvailableBalance={setAvailableBalance} availableBalance={availableBalance} ></AvailablePlayers>
-    </Suspense>:<SelectedPlayers></SelectedPlayers>
+      setAvailableBalance={setAvailableBalance} availableBalance={availableBalance} selectedPlayerData={selectedPlayerData} setSelectedPlayerData={setSelectedPlayerData}></AvailablePlayers>
+    </Suspense>:<SelectedPlayers selectedPlayerData={selectedPlayerData}></SelectedPlayers>
     }
 
     
