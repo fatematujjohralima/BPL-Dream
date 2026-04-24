@@ -1,10 +1,15 @@
 import React from 'react';
-import dltbtn from '../../assets/user1.png'
+import dltbtn from '../../assets/DELETE.png'
 
-const SelectedCard = ({player}) => {
+const SelectedCard = ({player ,removePlayer}) => {
+
+const deletePlayer=()=>{
+    removePlayer(player);
+}
+
     return (
         <div>
-            <div className='border-2 border-gray-400 p-4 rounded-2xl flex justify-between items-center'>
+            <div className='border-2 border-gray-400 p-4 rounded-2xl flex justify-between items-center mt-5'>
                     <div className='flex items-center'>
                         { <img className='h-12 w-12 rounded-2xl' src={player.playerImage} alt="" /> }
                         <div className='ml-2'>
@@ -15,7 +20,7 @@ playingRole
                         </div>
                     </div>
                     <div>
-                        <img src={dltbtn} alt="" />
+                        <img onClick={deletePlayer} className='h-8 w-10' src={dltbtn} alt="" />
                     </div>
                 </div>
             

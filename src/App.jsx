@@ -13,6 +13,14 @@ function App() {
   const [availableBalance,setAvailableBalance]=useState(6000000)
   const [selectedPlayerData,setSelectedPlayerData]=useState([])
   // console.log(selectedPlayerData);
+
+  const removePlayer=(player)=>{
+    const filteredData= selectedPlayerData.filter(ply => ply.playerName!==player.playerName)
+    console.log(filteredData)
+    setSelectedPlayerData(filteredData)
+    setAvailableBalance(availableBalance+ ply.playerPrice)
+
+  }
  
 
   return (
@@ -20,10 +28,13 @@ function App() {
     <Navbar availableBalance={availableBalance} ></Navbar>
 
     <div className=' max-w-5xl mx-auto flex justify-between items-center font-bold'>
-      <h1>Available Players</h1>
+      <h1>{
+        toggle===true?'Available Players':`Selected Players ${selectedPlayerData.length}/6`
+          }
+        </h1>
       <div>
         <button  onClick={() => setToggle(true)} className={`py-3 px-5 border-1 border-gray-200 rounded-l-2xl border-r-0 ${toggle===true?"bg-[#E7FE29]":''}`}>Available</button>
-        <button onClick={() => setToggle(false)} className={`py-3 px-5 border-1 border-gray-200 rounded-r-2xl border-l-0 ${toggle===false?"bg-[#E7FE29]":''}`}>Selected <span>(0)</span></button>
+        <button onClick={() => setToggle(false)} className={`py-3 px-5 border-1 border-gray-200 rounded-r-2xl border-l-0 ${toggle===false?"bg-[#E7FE29]":''}`}>Selected <span>({selectedPlayerData.length})</span></button>
       </div>
     </div>
 
@@ -31,7 +42,7 @@ function App() {
       toggle===true?<Suspense fallback='Loading...'>
       <AvailablePlayers availablePlayers={availablePlayers}
       setAvailableBalance={setAvailableBalance} availableBalance={availableBalance} selectedPlayerData={selectedPlayerData} setSelectedPlayerData={setSelectedPlayerData}></AvailablePlayers>
-    </Suspense>:<SelectedPlayers selectedPlayerData={selectedPlayerData}></SelectedPlayers>
+    </Suspense>:<SelectedPlayers selectedPlayerData={selectedPlayerData} removePlayer={removePlayer}></SelectedPlayers>
     }
 
     
